@@ -14,7 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $nome = "Giovani Da Cruz";
+    $idade = 33;
+    $profissao = "Programador";
+
+    /* O que se usa nas blades é o nome da chave do elemento no array */ 
+    return view('welcome', ['nome' => $nome, 'idade' => $idade, 
+    'profissao' => $profissao]);
 });
 
 Route::get('/first', function () {
