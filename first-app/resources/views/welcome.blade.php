@@ -6,11 +6,13 @@
 
         <title>First Project Laravel - Giovani Da Cruz</title>
 
-        
-        
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="/js/scripts.js"></script>
     </head>
     <body>
         <h1>I'm happpy! This is my first laravel app</h1>
+
+        <img src="/img/banner.jpg" alt="Banner">
         
         <h2>Treinando títulos</h2>
         
