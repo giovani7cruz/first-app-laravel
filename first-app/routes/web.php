@@ -36,3 +36,7 @@ Route::get('/', function () {
 Route::get('/first', function () {
     return view('first-page');
 });
+
+Route::get('/produtos', function () {
+    return view('products');
+});
