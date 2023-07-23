@@ -37,6 +37,15 @@ Route::get('/first', function () {
     return view('first-page');
 });
 
+/* exemplo de parâmetros string */ 
 Route::get('/produtos', function () {
-    return view('products');
+
+    $busca = request('search');
+
+    return view('products', ['busca' => $busca]);
+});
+
+/* Exemplo de parâmetros na url */ 
+Route::get('/produto/{id?}', function ($id = null) {
+    return view('product', ['id' => $id]);
 });
