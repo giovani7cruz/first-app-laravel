@@ -17,7 +17,9 @@ use App\Http\Controllers\ProductController;
 
 /* Buscando um retorno do controller "EventController", método "index" */
 Route::get('/', [EventController::class, 'index']);
+
 Route::get('/events/create', [EventController::class, 'create']);
+Route::get('/events/{id}', [EventController::class, 'show']);
 Route::post('/events', [EventController::class, 'store']);
 
 Route::get('/first', function () {

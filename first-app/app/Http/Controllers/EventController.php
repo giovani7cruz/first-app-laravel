@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Events;
+use Illuminate\Console\Scheduling\Event;
 
 class EventController extends Controller
 {
@@ -17,6 +18,11 @@ class EventController extends Controller
 
     public function create(){
         return view('events.create');
+    }
+
+    public function show($id){
+        $event = Events::findOrFail($id);
+        return view('events.show', ['event'=>$event]);
     }
 
     public function store(Request $request){
