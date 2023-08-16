@@ -9,15 +9,19 @@
     <form action="/events/" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="image">Imagem do Evento</label>
+            <label for="image">Imagem do Evento:</label>
             <input type="file" id="image" name="image" class="form-control-file">
         </div>
         <div class="form-group">
-            <label for="title">Eventos</label>
+            <label for="title">Evento:</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Nome do Evento">
         </div>
         <div class="form-group">
-            <label for="title">Cidade</label>
+            <label for="date">Data do Evento:</label>
+            <input type="date" class="form-control" id="date" name="date">
+        </div>
+        <div class="form-group">
+            <label for="title">Cidade:</label>
             <input type="text" class="form-control" id="city" name="city" placeholder="Local do Evento">
         </div>
         <div class="form-group">
@@ -28,7 +32,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="title">Descrição</label>
+            <label for="title">Descrição:</label>
             <textarea name="description" id="description" placeholder="O que há no evento?" cols="30" rows="10" class="form-control"></textarea>
         </div>
         <div class="form-group">
